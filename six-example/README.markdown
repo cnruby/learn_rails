@@ -5,7 +5,6 @@ _based on ruby 1.9.2p180 and rails 3.1.0_
 ### Installation
 
 ```ruby
-  gem install six
   git clone git://github.com/cnruby/learn_rails.git
   cd learn_rails/six-example/
   bundle
