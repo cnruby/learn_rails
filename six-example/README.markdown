@@ -21,7 +21,7 @@ _based on ruby 1.9.2p180 and rails 3.1.0_
       rails s
     ```
 
-2. open a browser
+2. open a browser in the shell
 
     ```ruby
 	  open http://0.0.0.0:3000/books
