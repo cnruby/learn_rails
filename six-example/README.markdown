@@ -38,3 +38,7 @@ _based on ruby 1.9.2p180 and rails 3.1.0_
     ```ruby
       you can see the normal website.
     ```
+
+### References
+
+#### https://github.com/randx/six
