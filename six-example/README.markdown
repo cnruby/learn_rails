@@ -13,7 +13,7 @@ _based on ruby 1.9.2p180 and rails 3.1.0_
 
 ### QuickStart
 
-3 steps:
+4 steps:
 
 1. start web server and app
 
