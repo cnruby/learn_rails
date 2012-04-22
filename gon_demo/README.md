@@ -1,5 +1,6 @@
-== Welcome to Example Package Gon
+# Welcome to Example Package Gon
 
+```ruby
 1. git clone git://github.com/cnruby/learn_rails.git
 2. cd learn_rails/gon_demo/
 3. bundle install
@@ -8,8 +9,9 @@
 6. rails server
 7. open http://localhost:3000/products.json
 8. open http://localhost:3000/products
+```
 
-== Getting Started
+# Getting Started
 
 ```ruby
 1.1. rails new demo_gon
