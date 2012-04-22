@@ -42,3 +42,4 @@ _based on ruby 1.9.2p180 and rails 3.1.0_
 ### References
 
 1. six home: https://github.com/randx/six
+2. chiense tutorial: http://goo.gl/86CAO
