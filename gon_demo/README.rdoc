@@ -1,6 +1,6 @@
 == Getting Started
 
-```shell
+```ruby
 git clone git://github.com/cnruby/learn_rails.git
 cd learn_rails/gon_demo/
 bundle install
