@@ -1,4 +1,4 @@
-# Welcome to Example Package Gon
+# 体验软件包Gon实例
 
 ```ruby
 1. git clone git://github.com/cnruby/learn_rails.git
@@ -11,7 +11,7 @@
 8. open http://localhost:3000/products
 ```
 
-# Getting Started
+# 创建件包Gon实例
 
 ```ruby
 1.1. rails new demo_gon
