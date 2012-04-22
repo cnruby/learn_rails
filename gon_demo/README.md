@@ -11,6 +11,7 @@
 
 == Getting Started
 
+```ruby
 1.1. rails new demo_gon
 1.2. cd demo_gon
 1.3. rails generate scaffold product name:string price:decimal
@@ -44,3 +45,4 @@
 4.1 https://github.com/railscasts/episode-324/
 4.2 http://railscasts.com/episodes/324-passing-data-to-javascript?view=asciicast
 4.3 http://railscasts.com/episodes/324-passing-data-to-javascript
+```
