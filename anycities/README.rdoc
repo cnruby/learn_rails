@@ -7,10 +7,15 @@ $ cd anycity
 == 开发Rails应用软件
 
 $ vim Gemfile
+
 $ bundle update
+
 $ rails g scaffold City zip_code:string name:string
+
 $ vim ./app/controllers/cities_controller.rb
+
 $ touch ./config/jobs.rb
+
 $ vim ./config/jobs.rb
 
 
