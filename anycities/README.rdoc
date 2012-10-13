@@ -1,36 +1,31 @@
 == 创建Rails应用软件通用开发命令
 
-$ rails new anycity
-$ cd anycity
+1. $ rails new anycity
+2. $ cd anycity
 
 
 == 开发Rails应用软件
 
-$ vim Gemfile
-
-$ bundle update
-
-$ rails g scaffold City zip_code:string name:string
-
-$ vim ./app/controllers/cities_controller.rb
-
-$ touch ./config/jobs.rb
-
-$ vim ./config/jobs.rb
+1. $ vim Gemfile
+2. $ bundle update
+3. $ rails g scaffold City zip_code:string name:string
+4. $ vim ./app/controllers/cities_controller.rb
+5. $ touch ./config/jobs.rb
+6. $ vim ./config/jobs.rb
 
 
 == 运行Rails应用软件通用开发命令
 
-$ rake db:create:all
-$ rake db:migrate
+1. $ rake db:create:all
+2. $ rake db:migrate
 
 
 == 运行Rails及其相关应用软件
 
-$ beanstalkd -l localhost -p 11300
-$ stalk ./config/jobs.rb
-$ rails s
-$ open http://localhost:3000/cities/new
+1. $ beanstalkd -l localhost -p 11300
+2. $ stalk ./config/jobs.rb
+3. $ rails s
+4. $ open http://localhost:3000/cities/new
 
 
 == 使用Rails应用软件
