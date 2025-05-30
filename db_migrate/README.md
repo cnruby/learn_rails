@@ -1,16 +1,22 @@
-# Project create database model in Sqlite3
+# Project 'create_model'
+
+create database model in Sqlite3
 
 ## Create the Project
 
 ```bash
-rails new create_model --database=sqlite3
-cd create_model
-rails server
-open http://127.0.0.1:3000
+rails new create_model --database=sqlite3 && cd create_model
+```
+
+```bash
+rails server && open http://127.0.0.1:3000
+```
+
+```bash
 Ctrl+C
 ```
 
-## Model Migrate File
+## The Model Migrate File
 
 ### Create Model Migrate File
 
@@ -54,12 +60,15 @@ class CreateMyModelNames < ActiveRecord::Migration[8.0]
 end
 ```
 
-## this Model with Sqlite3 Database
+## The Model with Sqlite3 Database
 
 ### Add this Model to Sqlite3 Database
 
 ```bash
 rails db:version
+```
+
+```bash
 rails db:migrate
 ```
 
@@ -67,7 +76,9 @@ rails db:migrate
 
 ```bash
 rails dbconsole
+```
 
+```bash
 sqlite> .tables
 sqlite> .q
 ```
@@ -76,7 +87,13 @@ sqlite> .q
 
 ```bash
 rails db:version
+```
+
+```bash
 rails db:rollback
+```
+
+```bash
 rails db:version
 ```
 
