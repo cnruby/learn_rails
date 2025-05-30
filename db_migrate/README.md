@@ -1,68 +1,84 @@
-# Project creat_model
+# Project create database model in Sqlite3
 
-## the commands
+## Create the Project
 
-### Create the Project
+```bash
+rails new create_model --database=sqlite3
+cd create_model
+rails server
+open http://127.0.0.1:3000
+Ctrl+C
+```
 
-  rails new create_model --database=sqlite3
-  cd create_model
-  rails server
-  open http://127.0.0.1:3000
-  Ctrl+C
+## Model Migrate File
 
 ### Create Model Migrate File
 
-  rails generate model MyModelName
+```bash
+rails generate model MyModelName
+```
 
 ### Change Model Migrate File
 
 This is the default migrate file:
 
-  class CreateMyModelNames < ActiveRecord::Migration[8.0]
-    def change
-      create_table :my_model_names do |t|
-        t.timestamps
-      end
+```ruby
+class CreateMyModelNames < ActiveRecord::Migration[8.0]
+  def change
+    create_table :my_model_names do |t|
+      t.timestamps
     end
   end
+end
+```
 
 This is our migrate file:
 
-  class CreateMyModelNames < ActiveRecord::Migration[8.0]
-    def change
-      create_table :my_model_names do |t|
-        t.string :name, null: false
-        t.string :email
-        t.string :phone
-        t.string :address
-        t.string :city
-        t.string :region
-        t.string :country
-        t.string :postal_code
-        t.datetime :deleted_at
+```ruby
+class CreateMyModelNames < ActiveRecord::Migration[8.0]
+  def change
+    create_table :my_model_names do |t|
+      t.string :name, null: false
+      t.string :email
+      t.string :phone
+      t.string :address
+      t.string :city
+      t.string :region
+      t.string :country
+      t.string :postal_code
+      t.datetime :deleted_at
 
-        t.timestamps
-      end
+  t.timestamps
     end
   end
+end
+```
+
+## this Model with Sqlite3 Database
 
 ### Add this Model to Sqlite3 Database
 
-  rails db:version
-  rails db:migrate
+```bash
+rails db:version
+rails db:migrate
+```
 
 ### Show this Model in Sqlite3 Database
 
-  rails dbconsole
+```bash
+rails dbconsole
 
-  sqlite> .tables
-  sqlite> .q
+sqlite> .tables
+sqlite> .q
+```
 
 ### Remove this Model from Sqlite3 Database
 
-  rails db:version
-  rails db:rollback
-  rails db:version
+```bash
+rails db:version
+rails db:rollback
+rails db:version
+```
 
 ### References
 
