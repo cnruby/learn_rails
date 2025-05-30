@@ -1,8 +1,8 @@
 # Project 'create_model'
 
-create database model in Sqlite3
+Project 'create_model': create database model in Sqlite3
 
-## Create the Project
+## Preparation: Create the Project
 
 ```bash
 rails new create_model --database=sqlite3 && cd create_model
@@ -18,13 +18,13 @@ Ctrl+C
 
 ## The Model Migrate File
 
-### Create Model Migrate File
+### Step 1.1 Create Model Migrate File
 
 ```bash
 rails generate model MyModelName
 ```
 
-### Change Model Migrate File
+### Step 1.2 Change Model Migrate File
 
 This is the default migrate file:
 
@@ -62,7 +62,7 @@ end
 
 ## The Model with Sqlite3 Database
 
-### Add this Model to Sqlite3 Database
+### Step 2.1 Add this Model to Sqlite3 Database
 
 ```bash
 rails db:version
@@ -72,7 +72,7 @@ rails db:version
 rails db:migrate
 ```
 
-### Show this Model in Sqlite3 Database
+### Step 2.2 Show this Model in Sqlite3 Database
 
 ```bash
 rails dbconsole
@@ -83,7 +83,7 @@ sqlite> .tables
 sqlite> .q
 ```
 
-### Remove this Model from Sqlite3 Database
+### SOS: Remove this Model from Sqlite3 Database
 
 ```bash
 rails db:version
