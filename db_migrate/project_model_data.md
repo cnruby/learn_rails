@@ -9,11 +9,12 @@
     - [Step 2.2 Show this Model in Sqlite3 Database](#step-22-show-this-model-in-sqlite3-database)
     - [SOS: Remove this Model from Sqlite3 Database](#sos-remove-this-model-from-sqlite3-database)
   - [The Model Data with Sqlite3 Database](#the-model-data-with-sqlite3-database)
-    - [3.1 Change the Rails System File](#31-change-the-rails-system-file)
-    - [3.2 Create the data file csv for table my\_model\_names](#32-create-the-data-file-csv-for-table-my_model_names)
-    - [3.3 Create the Import Data Rake File](#33-create-the-import-data-rake-file)
-    - [3.4 Import the data file csv to the Table in Sqlite3 Database](#34-import-the-data-file-csv-to-the-table-in-sqlite3-database)
-    - [3.5 Check the Table Data in Sqlite3 Database](#35-check-the-table-data-in-sqlite3-database)
+    - [Step 3.1 Change the Rails System File](#step-31-change-the-rails-system-file)
+    - [Step 3.2 Create the Import Data Rake File](#step-32-create-the-import-data-rake-file)
+    - [Step 3.3 Create the data file csv for table my\_model\_names](#step-33-create-the-data-file-csv-for-table-my_model_names)
+    - [Step 3.4 Import the data file csv to the Table in Sqlite3 Database](#step-34-import-the-data-file-csv-to-the-table-in-sqlite3-database)
+    - [Step 3.5 Check the Table Data in Sqlite3 Database](#step-35-check-the-table-data-in-sqlite3-database)
+    - [Step 3.6 SOS: Reimport the data for SQLites3 Database](#step-36-sos-reimport-the-data-for-sqlites3-database)
     - [References for Project 'model\_data'](#references-for-project-model_data)
     - [References for Project 'create\_model'](#references-for-project-create_model)
 
@@ -112,7 +113,7 @@ rails db:version
 
 ## The Model Data with Sqlite3 Database
 
-### 3.1 Change the Rails System File
+### Step 3.1 Change the Rails System File
 
 ```bash
 # ./config/environment.rb
@@ -125,18 +126,7 @@ FOLDER_BASE         = "#{Rails.root}/lib"
 SQLITE_DATABASE     = "#{Rails.root}/storage/development.sqlite3"
 ```
 
-### 3.2 Create the data file csv for table my_model_names
-
-This file is './lib/io_data/my_model_names.csv':
-
-```bash
-id;name;email;deleted_at;created_at;updated_at
-1;Luo;luo@gmail.com;;;
-2;Gu;gu@gmail.com;;;
-3;Dao;dao@gmail.com;;;
-```
-
-### 3.3 Create the Import Data Rake File
+### Step 3.2 Create the Import Data Rake File
 
 ```bash
 # 
@@ -168,13 +158,24 @@ EOF`
 end
 ```
 
-### 3.4 Import the data file csv to the Table in Sqlite3 Database
+### Step 3.3 Create the data file csv for table my_model_names
+
+This file is './lib/io_data/my_model_names.csv':
+
+```bash
+id;name;email;deleted_at;created_at;updated_at
+1;Luo;luo@gmail.com;;;
+2;Gu;gu@gmail.com;;;
+3;Dao;dao@gmail.com;;;
+```
+
+### Step 3.4 Import the data file csv to the Table in Sqlite3 Database
 
 ```bash
 bin/rails migrate_data:import_model_data
 ```
 
-### 3.5 Check the Table Data in Sqlite3 Database
+### Step 3.5 Check the Table Data in Sqlite3 Database
 
 ```bash
 rails dbconsole
@@ -184,6 +185,14 @@ rails dbconsole
 sqlite> .tables
 sqlite> SELECT * FROM my_model_names;
 sqlite> .q
+```
+
+### Step 3.6 SOS: Reimport the data for SQLites3 Database
+
+You can use the follow command back to Step 3.3 or Step 3.2
+
+```bash
+bin/rails db:drop && bin/rails db:create && bin/rails db:migrate
 ```
 
 ### References for Project 'model_data'
