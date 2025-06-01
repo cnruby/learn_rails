@@ -1,3 +1,15 @@
+
+- [Project 'create\_model'](#project-create_model)
+  - [Preparation: Create the Project](#preparation-create-the-project)
+  - [The Model Migrate File](#the-model-migrate-file)
+    - [Step 1.1 Create Model Migrate File](#step-11-create-model-migrate-file)
+    - [Step 1.2 Change Model Migrate File](#step-12-change-model-migrate-file)
+  - [The Model with Sqlite3 Database](#the-model-with-sqlite3-database)
+    - [Step 2.1 Add this Model to Sqlite3 Database](#step-21-add-this-model-to-sqlite3-database)
+    - [Step 2.2 Show this Model in Sqlite3 Database](#step-22-show-this-model-in-sqlite3-database)
+    - [SOS: Remove this Model from Sqlite3 Database](#sos-remove-this-model-from-sqlite3-database)
+    - [References](#references)
+
 # Project 'create_model'
 
 Project 'create_model': create database model in Sqlite3
