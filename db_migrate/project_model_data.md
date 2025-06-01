@@ -122,7 +122,7 @@ Rails.application.initialize!
 
 # add the follow codes for rails 8.0
 FOLDER_BASE         = "#{Rails.root}/lib"
-SQLITE_DATABASE     = "#{Rails.root}/db/development.sqlite3"
+SQLITE_DATABASE     = "#{Rails.root}/storage/development.sqlite3"
 ```
 
 ### 3.2 Create the data file csv for table my_model_names
@@ -141,7 +141,6 @@ id;name;email;deleted_at;created_at;updated_at
 ```bash
 # 
 =begin
-TESTING
 bin/rails migrate_data:import_model_data
 =end
 

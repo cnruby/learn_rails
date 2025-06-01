@@ -1,5 +1,4 @@
 =begin
-TESTING
 bin/rails migrate_data:import_model_data
 =end
 
